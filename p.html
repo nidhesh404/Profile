@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidhesh_Sarvaiya - AgriTech Entrepreneur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 60px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #667eea;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .bhaskar-id {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            font-size: 1.2em;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 15px 0;
+        }
+
+        .timeline-item::before {
+            content: '●';
+            position: absolute;
+            left: -37px;
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .contact-item {
+            padding: 15px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .venture-highlight {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .venture-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">NS</div>
+            <h1>Nidhesh Sarvaiya</h1>
+            <p class="tagline">AgriTech Founder | AI-Powered Indoor Saffron Cultivation | First Year CS AI/ML</p>
+            <p style="color: #666; margin: 10px 0;">UKA Tarsadia University | Surat, Gujarat</p>
+            <span class="bhaskar-id">🇮🇳 BHASKAR ID: IN-1125-9337DB</span>
+        </header>
+
+        <div class="section">
+            <h2><span class="icon">🚀</span> About Me</h2>
+            <p style="font-size: 1.1em; color: #555;">
+                First year CS AI/ML student developing India's first AI-automated indoor saffron cultivation system. 
+                Addressing ₹37,200 Cr import dependency through year-round production with 80%+ margins.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">🌱</span> Current Venture</h2>
+            <div class="venture-highlight">
+                <div class="venture-title">TechSaffron AgriSolutions</div>
+                <p style="font-size: 1.05em; margin-bottom: 15px;">
+                    Building an AI-powered indoor saffron farming system using aeroponics technology, 
+                    revolutionizing India's most expensive spice cultivation through automation and data-driven optimization.
+                </p>
+                
+                <div class="highlight-box">
+                    <strong>The Problem:</strong> India imports 94% of saffron (93-94 tons annually) despite having a ₹37,200 Cr domestic market. 
+                    Kashmir production has declined 70% due to climate change (8 tons in 2010 → 2.6 tons in 2024).
+                </div>
+                
+                <div class="highlight-box">
+                    <strong>The Solution:</strong> Indoor aeroponics with AI/ML climate optimization enables 4 harvests per year 
+                    (vs 1 traditional), 3x higher yields per sq ft, zero climate dependency, and 90% less water usage.
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">₹37,200 Cr</div>
+                    <div class="stat-label">Indian Market Size</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">94%</div>
+                    <div class="stat-label">Import Dependency</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">4x</div>
+                    <div class="stat-label">Harvests Per Year</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">80%+</div>
+                    <div class="stat-label">Profit Margins</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">🎯</span> Key Achievements</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>Startup India Registration</strong><br>
+                    Successfully registered on BHASKAR platform as AgriTech founder with DPIIT recognition pathway
+                </div>
+                <div class="timeline-item">
+                    <strong>Comprehensive Market Research</strong><br>
+                    Identified ₹199.6 Cr opportunity in Gujarat with only 2 competitors producing <5kg annually vs 5,000kg demand
+                </div>
+                <div class="timeline-item">
+                    <strong>Funding Applications</strong><br>
+                    Applying for ₹71+ lakhs in government grants (Agri Seed Fund, Gujarat schemes, RKVY-RAFTAAR)
+                </div>
+                <div class="timeline-item">
+                    <strong>Technology Development</strong><br>
+                    Designing AI/ML automation system for climate control, quality grading, and predictive analytics
+                </div>
+                <div class="timeline-item">
+                    <strong>Strategic Planning</strong><br>
+                    Proof of concept in Surat, scaling to 500m² facility in Bhavnagar with family-owned land
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">💻</span> Technical Skills</h2>
+            <div class="skills">
+                <span class="skill-tag">Artificial Intelligence</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">IoT Systems</span>
+                <span class="skill-tag">Automation</span>
+                <span class="skill-tag">Data Analytics</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Predictive Modeling</span>
+                <span class="skill-tag">Sensor Integration</span>
+                <span class="skill-tag">Agricultural Technology</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">🎓</span> Education</h2>
+            <div class="highlight-box">
+                <strong>Bachelor of Technology - Computer Science (AI/ML)</strong><br>
+                Asha M Tarsadia Institute of Computer Science and Technology<br>
+                UKA Tarsadia University, Surat, Gujarat<br>
+                <em>First Year - Currently Pursuing</em>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">💡</span> Innovation Focus</h2>
+            <ul style="list-style-position: inside; color: #555;">
+                <li style="margin: 10px 0;">AI-powered climate optimization for precise temperature, humidity, and light control</li>
+                <li style="margin: 10px 0;">Computer vision for automated quality grading and disease detection</li>
+                <li style="margin: 10px 0;">IoT sensor networks for real-time monitoring and predictive analytics</li>
+                <li style="margin: 10px 0;">Aeroponics system reducing water usage by 90% compared to traditional farming</li>
+                <li style="margin: 10px 0;">SaaS platform for licensing technology to other specialty crop farmers</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">🎯</span> Business Model</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">70%</div>
+                    <div class="stat-label">Premium Saffron Sales</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">10%</div>
+                    <div class="stat-label">Training Programs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">10%</div>
+                    <div class="stat-label">Tech Licensing</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">10%</div>
+                    <div class="stat-label">Bulb Sales</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">🏆</span> Competitive Advantages</h2>
+            <div class="highlight-box">
+                <strong>First-Mover:</strong> Zero commercial saffron farms in Surat, Gujarat's commercial capital
+            </div>
+            <div class="highlight-box">
+                <strong>Technology Moat:</strong> Only AI/ML automated system vs competitors' basic aeroponics
+            </div>
+            <div class="highlight-box">
+                <strong>Market Gap:</strong> 2 tiny players producing <5kg/year vs 5,000kg Gujarat demand
+            </div>
+            <div class="highlight-box">
+                <strong>Student Advantage:</strong> Government prioritizes student entrepreneurs in funding
+            </div>
+            <div class="highlight-box">
+                <strong>Resource Access:</strong> Free family land in Bhavnagar (₹20-25L capital saved)
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">📊</span> Financial Projections</h2>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <th style="padding: 15px; text-align: left;">Year</th>
+                        <th style="padding: 15px; text-align: left;">Production</th>
+                        <th style="padding: 15px; text-align: left;">Revenue</th>
+                        <th style="padding: 15px; text-align: left;">Profit</th>
+                        <th style="padding: 15px; text-align: left;">Margin</th>
+                    </tr>
+                    <tr style="background: rgba(102, 126, 234, 0.1);">
+                        <td style="padding: 15px;">Year 1</td>
+                        <td style="padding: 15px;">10-12 kg</td>
+                        <td style="padding: 15px;">₹35-42 L</td>
+                        <td style="padding: 15px;">₹20-24 L</td>
+                        <td style="padding: 15px;">57%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px;">Year 2</td>
+                        <td style="padding: 15px;">25-30 kg</td>
+                        <td style="padding: 15px;">₹87L-1.32 Cr</td>
+                        <td style="padding: 15px;">₹70L-1.15 Cr</td>
+                        <td style="padding: 15px;">80-87%</td>
+                    </tr>
+                    <tr style="background: rgba(102, 126, 234, 0.1);">
+                        <td style="padding: 15px;">Year 3</td>
+                        <td style="padding: 15px;">28-32 kg</td>
+                        <td style="padding: 15px;">₹1.13-1.60 Cr</td>
+                        <td style="padding: 15px;">₹95L-1.38 Cr</td>
+                        <td style="padding: 15px;">84-86%</td>
+                    </tr>
+                </table>
+            </div>
+            <p style="text-align: center; color: #667eea; font-weight: bold; margin-top: 15px;">
+                Payback Period: 12-18 months | Break-even: 8-10 kg/year
+            </p>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">📞</span> Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="icon">🌐</span>
+                    <div>
+                        <strong>Startup India</strong><br>
+                        BHASKAR ID: IN-1125-9337DB
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <strong>Location</strong><br>
+                        Surat, Gujarat, India
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🎓</span>
+                    <div>
+                        <strong>Institution</strong><br>
+                        UKA Tarsadia University
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">💼</span>
+                    <div>
+                        <strong>Sector</strong><br>
+                        AgriTech & AI/ML
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="text-align: center; background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);">
+            <h2 style="justify-content: center;"><span class="icon">🌟</span> Mission Statement</h2>
+            <p style="font-size: 1.2em; color: #555; max-width: 800px; margin: 20px auto; line-height: 1.8;">
+                "Leveraging AI and automation to revolutionize India's saffron production, reduce import dependency, 
+                and create a sustainable, technology-driven agricultural model that can be scaled nationwide."
+            </p>
+        </div>
+
+        <footer style="text-align: center; padding: 30px 0; color: rgba(255,255,255,0.9);">
+            <p style="font-size: 1.1em; margin-bottom: 10px;">Building the future of AgriTech, one harvest at a time 🌱</p>
+            <p style="font-size: 0.9em; opacity: 0.8;">Student Entrepreneur | Technology Innovator | Agriculture Transformer</p>
+        </footer>
+    </div>
+</body>
+</html>
